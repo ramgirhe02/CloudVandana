@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+var reverseWords = function(s) {
+    const words = s.split(' ');
+    const reversedWords = words.map(word => word.split('').reverse().join(''));
+    return reversedWords.join(' ');    
+};
+const ss = "This is a sunny day";
+document.getElementById("demo1").innerHTML = ss;
+
+const ss1= reverseWords(ss);
+document.getElementById("demo2").innerHTML = ss1;
+
+</script>
+
+</body>
+</html>

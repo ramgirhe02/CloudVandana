@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+		Form validation using HTML and JavaScript
+	</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function CHECKFORM(){
+	var name =
+		document.forms.RegForm.Name.value;
+    var Lname =
+		document.forms.RegForm.Lname.value;
+    var dob =
+		document.forms.RegForm.Dob.value;
+	var email =
+		document.forms.RegForm.EMail.value;
+	var phone =
+		document.forms.RegForm.Mobilenumber.value;
+	var profession=
+		document.forms.RegForm.Profession.value;
+    var country=
+        document.forms.RegForm.Country.value;
+
+	if (name == "" ) {
+		window.alert("Please enter your Name properly.");
+		name.focus();
+		return false;
+	}
+
+	if (Lname == "") {
+		window.alert("Please enter your Last Name.");
+		address.focus();
+		return false;
+	}
+    if (dob == "") {
+		window.alert("Please enter your Date Of Birth.");
+		address.focus();
+		return false;
+	}
+	
+	if (email == "" ) {
+		window.alert("Please enter a valid e-mail address.");
+		email.focus();
+		return false;
+	}
+	
+	if (phone == "" || phone.length<10) {
+		alert("Please enter your PhoneNumber");
+		password.focus();
+		return false;
+	}
+   
+	if (country.selectedIndex == -1) {
+		alert("Please enter your Country.");
+		what.focus();
+		return false;
+	}
+    if (profession== " ") {
+		alert("Please enter your Profession");
+		password.focus();
+		return false;
+	}
+    alert(name + Lname + dob);
+	return true;
+} 
+    </script>
+</head>
+<body>
+	<h1 style="text-align: center;">
+		survey form
+	</h1>
+	<form name="RegForm">
+		<p>
+			First Name:
+			<input type="text" size="65" name="Name" />
+		</p>
+		<br />
+        <p>
+			Last Name:
+			<input type="text" size="65" name="Lname" />
+		</p>
+		<br />
+        <p>
+			Date of Birth:
+			<input type="date" size="65" name="Dob" />
+		</p>
+		<br />
+		<p>
+			E-mail Address:
+			<input type="text" size="65" name="EMail" />
+		</p>
+		<br />
+        <p>
+			Mobile Number:
+			<input type="text" size="65" name="Mobilenumber" />
+		</p>
+		<br />
+        <p>
+            Gender :
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="male" value="male" checked>
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="female" value="female">
+		</p>
+		<br />
+		<p>
+			Profession:
+			<input type="text" size="65" name="Profession" />
+		</p>
+		<br />
+		<p>
+			Country
+			<select type="text" value="" name="Country">
+				<option>India</option>
+				<option>USA</option>
+				<option>Chin</option>
+				<option>SriLanka</option>
+				<option>Japan</option>
+			</select>
+		</p>
+		<br />
+		<br />
+		<p>
+			<input type="submit" value="send" name="Submit" onclick="CHECKFORM()" />
+			<input type="reset" value="Reset" name="Reset" />
+		</p>
+	</form>
+</body>
+</html>
